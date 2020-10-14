@@ -18,3 +18,17 @@ complete<-function(directory, id) {
   }
   return (data)
 }
+
+corr<-function(directory, threshold = 0) {
+  path<-paste("Desktop/RLabs", directory, sep = '/')
+  file<-list.files(path, full.names = TRUE)
+  data<-c()
+  for(i in 1:332) {
+    df<-read.csv(file[i])
+    df<-df[complete.cases(df),]
+    if(nrow(df)>threshold) {
+      data<-c(data, cor(df[,"sulfate"], df[,"nitrate"]))
+    }
+  }
+  return (data)
+}
