@@ -1,0 +1,47 @@
+1. Створити змінні базових (atomic) типів. Базові типи: character, numeric,
+integer, complex, logical.
+
+ch<-"sdhdsh"
+num<-11.1
+int<-1L
+complex<-1 + 1i
+logical<-TRUE
+
+2. Створити вектори, які: містить послідовність з 5 до 75; містить числа 3.14,
+2.71, 0, 13; 100 значень TRUE.
+
+v575<-c(5:75)
+vNumbers<-c(3.14, 2.71, 0.0, 13)
+vTrues<-c(rep(TRUE, 100))
+
+3. Створити наступну матрицю за допомогою matrix, та за допомогою cbind
+або rbind
+0.5 1.3 3.5
+3.9 131 2.8
+0 2.2 4.6
+2 7 5.1
+
+mMatrix<-matrix(c(0.5, 3.9, 0, 2, 1.3, 131, 2.2, 7, 3.5, 2.8, 4.6, 5.1), nrow = 4, ncol = 3)
+mCbind<-cbind(c(0.5, 3.9, 0, 2), c(1.3, 131, 2.2, 7), c(3.5, 2.8, 4.6, 5.1))
+
+4. Створити довільний список (list), в який включити всі базові типи.
+
+list<-list(ch, num, int, complex, logical)
+
+5. Створити фактор з трьома рівнями «baby», «child», «adult».
+
+fact<-fact(c("baby","child","adult"))
+
+6. Знайти індекс першого значення NA в векторі 1, 2, 3, 4, NA, 6, 7, NA, 9, NA, 11. Знайти кількість значень NA.
+
+vRandom <- c(1:4, NA, 6, 7, NA, 9, NA, 11)
+match(NA, vRandom)
+  
+7. Створити довільний data frame та вивести в консоль.
+
+dataFrame<-data.frame(col1=1:4, col2=1:4)
+dataFrame
+
+8. Змінити імена стовпців цього data frame.
+
+names(dataFrame)<-c("col3", "col4")
