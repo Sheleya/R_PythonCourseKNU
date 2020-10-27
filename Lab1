@@ -36,6 +36,7 @@ fact<-fact(c("baby","child","adult"))
 
 vRandom <- c(1:4, NA, 6, 7, NA, 9, NA, 11)
 match(NA, vRandom)
+sum(is.na(vRandom))
   
 7. Створити довільний data frame та вивести в консоль.
 
