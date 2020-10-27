@@ -38,11 +38,6 @@ my_ifelse<-function(x, exp, n) {
 removeNA вказує, чи видаляти NA значення. По замовчуванню він
 дорівнює TRUE.
 
-columnmean<-function(x, removeNA = TRUE) {
-  if(removeNA == 'FALSE') {
-    res <- mean(x,na.rm = FALSE)
-  } else {
-    res <- mean(x,na.rm = TRUE)
-  }
-  res
+columnmean <- function(x, removeNA = TRUE) {
+  return (colMeans(x, na.rm = removeNA))
 }
